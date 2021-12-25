@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://pavanbhat.xyz/sitemap.xml
