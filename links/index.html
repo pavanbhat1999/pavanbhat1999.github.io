@@ -17,24 +17,43 @@
       rel="stylesheet"
     />
     <style>
-      #footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        height: 3rem; /* Footer height */
-      }
       body {
         font-family: 'Fira Code', monospace;
+        max-width: 60em;
+        margin: 0 auto;
+        min-height: 100%;
+      }
+      .container {
+        text-align: justify;
+        line-height: 2;
+        font-size: 1.2rem;
+        padding: 1em;
+      }
+      #header {
+        background-color: #FFFFFF;
+        position: sticky;
+        top: 0;
+      }
+      #footer {
+        position: fixed;
+        padding: 10px 10px 0px 10px;
+        bottom: 0;
+        height: 40px;
+        max-width: 60em;
+        width: 100%;
+        background: #ffffff;
       }
     </style>
   </head>
 
   <body>
-    <h1>🙍Pavan Bhat</h1>
-    <a href="/"> [ HOME ]</a>
-    <a href="/links"> [ LINKS ]</a>
-    <a href="/blogs"> [ BLOG ]</a>
+    <div id="header">
+      <h1>🙍Pavan Bhat</h1>
+      <a href="/"> [ HOME ]</a>
+      <a href="/links"> [ LINKS ]</a>
+      <a href="/blogs"> [ BLOG ]</a>
     <hr />
+    </div>
     <section class="section">
       <div class="container">
 <p align='justify'>E-Mail : <a href=" mailto: contact@pavanbhat.me" target="_blank"> contact@pavanbhat.me </a></p>
@@ -44,8 +63,7 @@
 </div>
     </section>
     <footer id="footer">
-      <hr />
-      Made with zola by <b>🧠 Pavan Bhat ©</b> All rights reserved 2021
+      <span> Made by <b>🧠 Pavan Bhat ©</b> All rights reserved 2021 </span>
     </footer>
   </body>
 </html>
