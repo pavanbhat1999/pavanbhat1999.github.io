@@ -101,17 +101,42 @@
     <section class="section">
       <div class="container">
 <h1 class="title">
-  List of My Notes and cheats
+  Linux Commands
 </h1>
+<p class="subtitle"><strong></strong></p>
+<ol>
+<li>Battery status
 <ul>
-  
-  <li><a href="http://pavanbhat.me/cheats/ranger-shortcuts/">Ranger File Manager Shortcuts</a></li>
-  
-  <li><a href="http://pavanbhat.me/cheats/anime-list/">My Anime List</a></li>
-  
-  <li><a href="http://pavanbhat.me/cheats/linux-commands/">Linux Commands</a></li>
-  
+<li><pre style="background-color:#002b36;color:#839496;"><code><span>cat /sys/class/power_supply/BAT0/status
+</span></code></pre>
+</li>
+<li><pre style="background-color:#002b36;color:#839496;"><code><span>acpid
+</span></code></pre>
+</li>
+<li><pre style="background-color:#002b36;color:#839496;"><code><span>sudo bat -t &lt;limit_range&gt;
+</span></code></pre>
+</li>
 </ul>
+</li>
+<li>File Operations
+<ul>
+<li><pre style="background-color:#002b36;color:#839496;"><code><span>du -chd 1 | sort -h
+</span></code></pre>
+</li>
+<li><pre style="background-color:#002b36;color:#839496;"><code><span>ls -l
+</span></code></pre>
+</li>
+</ul>
+</li>
+<li>Burn ISO
+<ul>
+<li><pre style="background-color:#002b36;color:#839496;"><code><span>dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx status=progress &amp;&amp; sync
+</span></code></pre>
+</li>
+</ul>
+</li>
+</ol>
+
 </div>
     </section>
     <footer id="footer">
