@@ -54,8 +54,34 @@
         padding: 0% 5%;
         text-decoration: none;
       }
-      b{
-          color: orange;
+      b {
+        color: orange;
+      }
+      pre {
+        padding: 1rem;
+        overflow-x: hidden;
+      }
+      // The line numbers already provide some kind of left/right padding
+      pre[data-linenos] {
+        padding: 1rem 0;
+      }
+      pre table td {
+        padding: 0;
+      }
+      // The line number cells
+      pre table td:nth-of-type(1) {
+        text-align: center;
+        user-select: none;
+      }
+      pre mark {
+        // If you want your highlights to take the full width.
+        display: block;
+        // The default background colour of a mark is bright yellow
+        background-color: rgba(254, 252, 232, 0.9);
+      }
+      pre table {
+        width: 100%;
+        border-collapse: collapse;
       }
     </style>
   </head>
@@ -77,7 +103,7 @@
 <h1 class="title">
   Cheat 1
 </h1>
-<p class="subtitle"><strong>2020-11-27</strong></p>
+<p class="subtitle"><strong></strong></p>
 <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
 
 </div>
