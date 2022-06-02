@@ -44,11 +44,14 @@
     </url>
     <url>
         <loc>http://pavanbhat.me/projects/first/</loc>
+        <lastmod>2022-01-04</lastmod>
     </url>
     <url>
         <loc>http://pavanbhat.me/projects/second/</loc>
+        <lastmod>2022-02-04</lastmod>
     </url>
     <url>
         <loc>http://pavanbhat.me/projects/third/</loc>
+        <lastmod>2022-03-04</lastmod>
     </url>
 </urlset>
