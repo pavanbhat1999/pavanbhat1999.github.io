@@ -109,109 +109,109 @@
 <ul>
 <li>
 <p>Cron</p>
-<pre style="background-color:#002b36;color:#839496;"><code><span>sudo pacman -S cronie
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>sudo pacman -S cronie
 </span></code></pre>
 </li>
 <li>
 <p>Dunst</p>
-<pre style="background-color:#002b36;color:#839496;"><code><span>sudo pacman -S dunst
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>sudo pacman -S dunst
 </span></code></pre>
 </li>
 </ul>
 <h1 id="process">Process</h1>
 <h2 id="step-1-bash-script">Step 1 : Bash script</h2>
 <p><a href="https://github.com/pavanbhat1999/bin/blob/master/scripts/battery_notification.sh">Download from Github</a></p>
-<pre data-lang="bash" style="background-color:#002b36;color:#839496;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#586e75;">#!/usr/bin/bash
-</span><span style="color:#268bd2;">STATUS</span><span style="color:#657b83;">=</span><span style="color:#859900;">$</span><span style="color:#657b83;">(</span><span style="color:#b58900;">cat</span><span style="color:#2aa198;"> /sys/class/power_supply/BAT0/status</span><span style="color:#657b83;">)
-</span><span style="color:#268bd2;">CURRENT_BAT</span><span style="color:#657b83;">=</span><span style="color:#859900;">$</span><span style="color:#657b83;">(</span><span style="color:#b58900;">cat</span><span style="color:#2aa198;"> /sys/class/power_supply/BAT0/capacity</span><span style="color:#657b83;">)
-</span><span style="color:#268bd2;">UPPER_LIMIT</span><span style="color:#657b83;">=</span><span style="color:#2aa198;">60
-</span><span style="color:#268bd2;">LOWER_LIMIT</span><span style="color:#657b83;">=</span><span style="color:#2aa198;">30
-</span><span style="color:#859900;">if [ </span><span>&quot;</span><span style="color:#859900;">$</span><span style="color:#268bd2;">STATUS</span><span>&quot; </span><span style="color:#859900;">= </span><span>&quot;</span><span style="color:#2aa198;">Charging</span><span>&quot; </span><span style="color:#859900;">]; then
-</span><span>    </span><span style="color:#859900;">echo </span><span>&#39;</span><span style="color:#2aa198;">Charging</span><span>&#39;
-</span><span>    </span><span style="color:#859900;">if [ $</span><span style="color:#268bd2;">CURRENT_BAT -gt </span><span style="color:#859900;">$</span><span style="color:#268bd2;">UPPER_LIMIT </span><span style="color:#859900;">]
-</span><span>    </span><span style="color:#859900;">then
-</span><span>        </span><span style="color:#b58900;">notify-send </span><span>&quot;</span><span style="color:#2aa198;">Above limit Please Unplug the Charger</span><span>&quot;</span><span style="color:#268bd2;"> -u</span><span> critical
-</span><span>    </span><span style="color:#859900;">fi
-</span><span style="color:#859900;">else
-</span><span>    </span><span style="color:#859900;">echo </span><span>&quot;</span><span style="color:#2aa198;">Not Charging</span><span>&quot;
-</span><span>    </span><span style="color:#859900;">if [ $</span><span style="color:#268bd2;">CURRENT_BAT -gt </span><span style="color:#859900;">$</span><span style="color:#268bd2;">LOWER_LIMIT </span><span style="color:#859900;">]
-</span><span>    </span><span style="color:#859900;">then
-</span><span>        </span><span style="color:#859900;">echo </span><span>&#39;</span><span style="color:#2aa198;">Optimum Charge</span><span>&#39;
-</span><span>    </span><span style="color:#859900;">fi
-</span><span>    </span><span style="color:#859900;">if [ $</span><span style="color:#268bd2;">CURRENT_BAT -lt </span><span style="color:#859900;">$</span><span style="color:#268bd2;">LOWER_LIMIT </span><span style="color:#859900;">]
-</span><span>    </span><span style="color:#859900;">then
-</span><span>        </span><span style="color:#b58900;">notify-send </span><span>&quot;</span><span style="color:#2aa198;">Gone below Lower Limit. Charge Me Please</span><span>&quot;</span><span style="color:#268bd2;"> -u</span><span> critical
-</span><span>    </span><span style="color:#859900;">fi
-</span><span style="color:#859900;">fi
+<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#6272a4;">#!/usr/bin/bash
+</span><span style="color:#ffffff;">STATUS</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">$(</span><span style="color:#50fa7b;">cat</span><span style="color:#f1fa8c;"> /sys/class/power_supply/BAT0/status)
+</span><span style="color:#ffffff;">CURRENT_BAT</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">$(</span><span style="color:#50fa7b;">cat</span><span style="color:#f1fa8c;"> /sys/class/power_supply/BAT0/capacity)
+</span><span style="color:#ffffff;">UPPER_LIMIT</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">60
+</span><span style="color:#ffffff;">LOWER_LIMIT</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">30
+</span><span style="color:#ff79c6;">if </span><span style="color:#8be9fd;">[ </span><span style="color:#f1fa8c;">&quot;$</span><span style="color:#ffffff;">STATUS</span><span style="color:#f1fa8c;">&quot; </span><span style="color:#ff79c6;">= </span><span style="color:#f1fa8c;">&quot;Charging&quot; </span><span style="color:#8be9fd;">]</span><span style="color:#ff79c6;">; then
+</span><span>    </span><span style="color:#8be9fd;">echo </span><span style="color:#f1fa8c;">&#39;Charging&#39;
+</span><span>    </span><span style="color:#ff79c6;">if </span><span style="color:#8be9fd;">[ </span><span>$</span><span style="color:#ffffff;">CURRENT_BAT </span><span style="font-style:italic;color:#ffb86c;">-gt </span><span>$</span><span style="color:#ffffff;">UPPER_LIMIT </span><span style="color:#8be9fd;">]
+</span><span>    </span><span style="color:#ff79c6;">then
+</span><span>        </span><span style="color:#50fa7b;">notify-send </span><span style="color:#f1fa8c;">&quot;Above limit Please Unplug the Charger&quot;</span><span style="font-style:italic;color:#ffb86c;"> -u</span><span> critical
+</span><span>    </span><span style="color:#ff79c6;">fi
+</span><span style="color:#ff79c6;">else
+</span><span>    </span><span style="color:#8be9fd;">echo </span><span style="color:#f1fa8c;">&quot;Not Charging&quot;
+</span><span>    </span><span style="color:#ff79c6;">if </span><span style="color:#8be9fd;">[ </span><span>$</span><span style="color:#ffffff;">CURRENT_BAT </span><span style="font-style:italic;color:#ffb86c;">-gt </span><span>$</span><span style="color:#ffffff;">LOWER_LIMIT </span><span style="color:#8be9fd;">]
+</span><span>    </span><span style="color:#ff79c6;">then
+</span><span>        </span><span style="color:#8be9fd;">echo </span><span style="color:#f1fa8c;">&#39;Optimum Charge&#39;
+</span><span>    </span><span style="color:#ff79c6;">fi
+</span><span>    </span><span style="color:#ff79c6;">if </span><span style="color:#8be9fd;">[ </span><span>$</span><span style="color:#ffffff;">CURRENT_BAT </span><span style="font-style:italic;color:#ffb86c;">-lt </span><span>$</span><span style="color:#ffffff;">LOWER_LIMIT </span><span style="color:#8be9fd;">]
+</span><span>    </span><span style="color:#ff79c6;">then
+</span><span>        </span><span style="color:#50fa7b;">notify-send </span><span style="color:#f1fa8c;">&quot;Gone below Lower Limit. Charge Me Please&quot;</span><span style="font-style:italic;color:#ffb86c;"> -u</span><span> critical
+</span><span>    </span><span style="color:#ff79c6;">fi
+</span><span style="color:#ff79c6;">fi
 </span><span>
 </span></code></pre>
 <h2 id="step-2-dunsrc-for-sound">Step 2 : Dunsrc for sound</h2>
 <p><a href="aaa">Download from Github</a></p>
-<pre data-lang="bash" style="background-color:#002b36;color:#839496;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#b58900;">[global]
-</span><span style="color:#b58900;">monitor</span><span> = 0
-</span><span style="color:#b58900;">follow</span><span> = mouse
-</span><span style="color:#b58900;">geometry</span><span> = &quot;</span><span style="color:#2aa198;">1000x1000-20+48</span><span>&quot;
-</span><span style="color:#b58900;">indicate_hidden</span><span> = yes
-</span><span style="color:#b58900;">shrink</span><span> = no
-</span><span style="color:#b58900;">separator_height</span><span> = 0
-</span><span style="color:#b58900;">padding</span><span> = 32
-</span><span style="color:#b58900;">horizontal_padding</span><span> = 32
-</span><span style="color:#b58900;">frame_width</span><span> = 2
-</span><span style="color:#b58900;">sort</span><span> = no
-</span><span style="color:#b58900;">idle_threshold</span><span> = 120
-</span><span style="color:#b58900;">font</span><span> = Fira Code 14
-</span><span style="color:#b58900;">line_height</span><span> = 4
-</span><span style="color:#b58900;">markup</span><span> = full
-</span><span style="color:#b58900;">format</span><span> = </span><span style="color:#859900;">%</span><span style="color:#268bd2;">s</span><span style="color:#dc322f;">\n</span><span style="color:#859900;">%</span><span style="color:#268bd2;">b
-</span><span style="color:#b58900;">alignment</span><span> = center
-</span><span style="color:#b58900;">show_age_threshold</span><span> = 60
-</span><span style="color:#b58900;">word_wrap</span><span> = yes
-</span><span style="color:#b58900;">ignore_newline</span><span> = no
-</span><span style="color:#b58900;">stack_duplicates</span><span> = false
-</span><span style="color:#b58900;">hide_duplicate_count</span><span> = yes
-</span><span style="color:#b58900;">show_indicators</span><span> = no
-</span><span style="color:#b58900;">icon_position</span><span> = off
-</span><span style="color:#b58900;">sticky_history</span><span> = yes
-</span><span style="color:#b58900;">history_length</span><span> = 20
-</span><span style="color:#b58900;">browser</span><span> = /usr/bin/brave
-</span><span style="color:#b58900;">always_run_script</span><span> = true
-</span><span style="color:#b58900;">title</span><span> = Dunst
-</span><span style="color:#b58900;">class</span><span> = Dunst
-</span><span style="color:#b58900;">mouse_middle_click</span><span> = do_action
-</span><span style="color:#b58900;">[shortcuts]
-</span><span style="color:#b58900;">close</span><span> = ctrl+space
-</span><span style="color:#b58900;">close_all</span><span> = ctrl+shift+space
-</span><span style="color:#b58900;">history</span><span> = ctrl+grave
-</span><span style="color:#b58900;">context</span><span> = ctrl+shift+period
+<pre data-lang="bash" style="background-color:#282a36;color:#f8f8f2;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#50fa7b;">[global]
+</span><span style="color:#50fa7b;">monitor</span><span> = 0
+</span><span style="color:#50fa7b;">follow</span><span> = mouse
+</span><span style="color:#50fa7b;">geometry</span><span> = </span><span style="color:#f1fa8c;">&quot;1000x1000-20+48&quot;
+</span><span style="color:#50fa7b;">indicate_hidden</span><span> = yes
+</span><span style="color:#50fa7b;">shrink</span><span> = no
+</span><span style="color:#50fa7b;">separator_height</span><span> = 0
+</span><span style="color:#50fa7b;">padding</span><span> = 32
+</span><span style="color:#50fa7b;">horizontal_padding</span><span> = 32
+</span><span style="color:#50fa7b;">frame_width</span><span> = 2
+</span><span style="color:#50fa7b;">sort</span><span> = no
+</span><span style="color:#50fa7b;">idle_threshold</span><span> = 120
+</span><span style="color:#50fa7b;">font</span><span> = Fira Code 14
+</span><span style="color:#50fa7b;">line_height</span><span> = 4
+</span><span style="color:#50fa7b;">markup</span><span> = full
+</span><span style="color:#50fa7b;">format</span><span> = %</span><span style="color:#ffffff;">s</span><span style="color:#ff79c6;">\n</span><span>%</span><span style="color:#ffffff;">b
+</span><span style="color:#50fa7b;">alignment</span><span> = center
+</span><span style="color:#50fa7b;">show_age_threshold</span><span> = 60
+</span><span style="color:#50fa7b;">word_wrap</span><span> = yes
+</span><span style="color:#50fa7b;">ignore_newline</span><span> = no
+</span><span style="color:#50fa7b;">stack_duplicates</span><span> = false
+</span><span style="color:#50fa7b;">hide_duplicate_count</span><span> = yes
+</span><span style="color:#50fa7b;">show_indicators</span><span> = no
+</span><span style="color:#50fa7b;">icon_position</span><span> = off
+</span><span style="color:#50fa7b;">sticky_history</span><span> = yes
+</span><span style="color:#50fa7b;">history_length</span><span> = 20
+</span><span style="color:#50fa7b;">browser</span><span> = /usr/bin/brave
+</span><span style="color:#50fa7b;">always_run_script</span><span> = true
+</span><span style="color:#50fa7b;">title</span><span> = Dunst
+</span><span style="color:#50fa7b;">class</span><span> = Dunst
+</span><span style="color:#50fa7b;">mouse_middle_click</span><span> = do_action
+</span><span style="color:#50fa7b;">[shortcuts]
+</span><span style="color:#50fa7b;">close</span><span> = ctrl+space
+</span><span style="color:#50fa7b;">close_all</span><span> = ctrl+shift+space
+</span><span style="color:#50fa7b;">history</span><span> = ctrl+grave
+</span><span style="color:#50fa7b;">context</span><span> = ctrl+shift+period
 </span><span>
-</span><span style="color:#b58900;">[urgency_low]
-</span><span style="color:#b58900;">timeout</span><span> = 4
-</span><span style="color:#b58900;">background</span><span> = &quot;</span><span style="color:#2aa198;">#141c21</span><span>&quot;
-</span><span style="color:#b58900;">foreground</span><span> = &quot;</span><span style="color:#2aa198;">#93a1a1</span><span>&quot;
-</span><span style="color:#b58900;">frame_color</span><span> = &quot;</span><span style="color:#2aa198;">#8bc34a</span><span>&quot;
+</span><span style="color:#50fa7b;">[urgency_low]
+</span><span style="color:#50fa7b;">timeout</span><span> = 4
+</span><span style="color:#50fa7b;">background</span><span> = </span><span style="color:#f1fa8c;">&quot;#141c21&quot;
+</span><span style="color:#50fa7b;">foreground</span><span> = </span><span style="color:#f1fa8c;">&quot;#93a1a1&quot;
+</span><span style="color:#50fa7b;">frame_color</span><span> = </span><span style="color:#f1fa8c;">&quot;#8bc34a&quot;
 </span><span>
-</span><span style="color:#b58900;">[urgency_normal]
-</span><span style="color:#b58900;">timeout</span><span> = 8
-</span><span style="color:#b58900;">background</span><span> = &quot;</span><span style="color:#2aa198;">#141c21</span><span>&quot;
-</span><span style="color:#b58900;">foreground</span><span> = &quot;</span><span style="color:#2aa198;">#93a1a1</span><span>&quot;
-</span><span style="color:#b58900;">frame_color</span><span> = &quot;</span><span style="color:#2aa198;">#ba68c8</span><span>&quot;
+</span><span style="color:#50fa7b;">[urgency_normal]
+</span><span style="color:#50fa7b;">timeout</span><span> = 8
+</span><span style="color:#50fa7b;">background</span><span> = </span><span style="color:#f1fa8c;">&quot;#141c21&quot;
+</span><span style="color:#50fa7b;">foreground</span><span> = </span><span style="color:#f1fa8c;">&quot;#93a1a1&quot;
+</span><span style="color:#50fa7b;">frame_color</span><span> = </span><span style="color:#f1fa8c;">&quot;#ba68c8&quot;
 </span><span>
-</span><span style="color:#b58900;">[urgency_critical]
-</span><span style="color:#b58900;">timeout</span><span> = 5
-</span><span style="color:#b58900;">background</span><span> = &quot;</span><span style="color:#2aa198;">#B10F29</span><span>&quot;
-</span><span style="color:#b58900;">foreground</span><span> = &quot;</span><span style="color:#2aa198;">#93a1a1</span><span>&quot;
-</span><span style="color:#b58900;">frame_color</span><span> = &quot;</span><span style="color:#2aa198;">#ff7043</span><span>&quot;
-</span><span style="color:#b58900;">[play_sound]
-</span><span>    </span><span style="color:#268bd2;">summary</span><span style="color:#657b83;">=</span><span>&quot;</span><span style="color:#2aa198;">*</span><span>&quot;
-</span><span>    </span><span style="color:#586e75;"># sound file which you want
-</span><span>    </span><span style="color:#268bd2;">script</span><span style="color:#657b83;">= </span><span style="color:#b58900;">paplay</span><span> sound.ogg
+</span><span style="color:#50fa7b;">[urgency_critical]
+</span><span style="color:#50fa7b;">timeout</span><span> = 5
+</span><span style="color:#50fa7b;">background</span><span> = </span><span style="color:#f1fa8c;">&quot;#B10F29&quot;
+</span><span style="color:#50fa7b;">foreground</span><span> = </span><span style="color:#f1fa8c;">&quot;#93a1a1&quot;
+</span><span style="color:#50fa7b;">frame_color</span><span> = </span><span style="color:#f1fa8c;">&quot;#ff7043&quot;
+</span><span style="color:#50fa7b;">[play_sound]
+</span><span>    </span><span style="color:#ffffff;">summary</span><span style="color:#ff79c6;">=</span><span style="color:#f1fa8c;">&quot;*&quot;
+</span><span>    </span><span style="color:#6272a4;"># sound file which you want
+</span><span>    </span><span style="color:#ffffff;">script</span><span style="color:#ff79c6;">= </span><span style="color:#50fa7b;">paplay</span><span> sound.ogg
 </span></code></pre>
 <h2 id="step-3-add-cron">Step 3 : Add Cron</h2>
 <p>After installing cron and enabling it run the following command</p>
-<pre style="background-color:#002b36;color:#839496;"><code><span>crontab -e
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>crontab -e
 </span></code></pre>
 <p>Then add these lines of code</p>
-<pre style="background-color:#002b36;color:#839496;"><code><span>* * * * *  XDG_RUNTIME_DIR=/run/user/$(id -u) sh battery_notification.sh
+<pre style="background-color:#282a36;color:#f8f8f2;"><code><span>* * * * *  XDG_RUNTIME_DIR=/run/user/$(id -u) sh battery_notification.sh
 </span></code></pre>
 
 </div>
