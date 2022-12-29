@@ -1,3 +1,4 @@
 User-agent: *
+Disallow:
 Allow: /
-Sitemap: http://pavanbhat.me/sitemap.xml
+Sitemap: https://pavanbhat1999.github.io/sitemap.xml
