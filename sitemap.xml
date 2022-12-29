@@ -25,6 +25,9 @@
         <loc>http://pavanbhat.me/cheats/anime-list/</loc>
     </url>
     <url>
+        <loc>http://pavanbhat.me/cheats/entertainment/</loc>
+    </url>
+    <url>
         <loc>http://pavanbhat.me/cheats/linux-commands/</loc>
     </url>
     <url>
@@ -40,12 +43,19 @@
         <loc>http://pavanbhat.me/projects/</loc>
     </url>
     <url>
-        <loc>http://pavanbhat.me/projects/first/</loc>
+        <loc>http://pavanbhat.me/projects/cgv/</loc>
+        <lastmod>2022-03-04</lastmod>
     </url>
     <url>
-        <loc>http://pavanbhat.me/projects/second/</loc>
+        <loc>http://pavanbhat.me/projects/final-year-project/</loc>
+        <lastmod>2022-01-04</lastmod>
     </url>
     <url>
-        <loc>http://pavanbhat.me/projects/third/</loc>
+        <loc>http://pavanbhat.me/projects/porfolio/</loc>
+        <lastmod>2022-03-03</lastmod>
+    </url>
+    <url>
+        <loc>http://pavanbhat.me/projects/salesforce-project/</loc>
+        <lastmod>2022-02-04</lastmod>
     </url>
 </urlset>
