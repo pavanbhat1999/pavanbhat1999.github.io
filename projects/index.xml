@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Pavan bhat</title>
+    <link>/projects/</link>
+    <description>Recent content in Projects on Pavan bhat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 11 Jun 2023 18:21:11 +0530</lastBuildDate><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project 1</title>
+      <link>/projects/first/</link>
+      <pubDate>Sun, 11 Jun 2023 18:21:11 +0530</pubDate>
+      
+      <guid>/projects/first/</guid>
+      <description>Heading 1 Link to heading Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.</description>
+    </item>
+    
+  </channel>
+</rss>

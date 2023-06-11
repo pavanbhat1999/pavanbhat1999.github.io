@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Pavan bhat</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Pavan bhat</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 04 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shell script for battery Notification</title>
+      <link>/posts/1_battery-notification/</link>
+      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/1_battery-notification/</guid>
+      <description>Dependencies Link to heading These are the application you need in Arch Linux. You can try with same applications in any other distro as well
+Cron
+sudo pacman -S cronie
+Dunst
+sudo pacman -S dunst
+Process Link to heading Step 1 : Bash script Link to heading Download from Github
+#!/usr/bin/bash STATUS=$(cat /sys/class/power_supply/BAT0/status) CURRENT_BAT=$(cat /sys/class/power_supply/BAT0/capacity) UPPER_LIMIT=60 LOWER_LIMIT=30 if [ &amp;#34;$STATUS&amp;#34; = &amp;#34;Charging&amp;#34; ]; then echo &amp;#39;Charging&amp;#39; if [ $CURRENT_BAT -gt $UPPER_LIMIT ] then notify-send &amp;#34;Above limit Please Unplug the Charger&amp;#34; -u critical fi else echo &amp;#34;Not Charging&amp;#34; if [ $CURRENT_BAT -gt $LOWER_LIMIT ] then echo &amp;#39;Optimum Charge&amp;#39; fi if [ $CURRENT_BAT -lt $LOWER_LIMIT ] then notify-send &amp;#34;Gone below Lower Limit.</description>
+    </item>
+    
+  </channel>
+</rss>
