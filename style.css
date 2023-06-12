@@ -1,0 +1,45 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#terminal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: lime;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#prompt {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#prompt span {
+  color: lime;
+  margin-right: 5px;
+}
+
+#commandInput {
+  background-color: black;
+  color: lime;
+  border: none;
+  outline: none;
+  font-family: monospace;
+  width: 100%;
+}
+
+#output {
+  flex-grow: 1;
+  overflow: auto;
+  border: 1px solid lime;
+  padding: 5px;
+}
