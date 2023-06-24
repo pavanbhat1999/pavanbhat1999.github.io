@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Pavan bhat</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://pavanbhat1999.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://pavanbhat1999.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nixos migration</title>
+      <link>http://pavanbhat1999.github.io/posts/nixos/</link>
+      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://pavanbhat1999.github.io/posts/nixos/</guid>
+      <description>Give a try to nixos Link to heading Being an arch user for more than 2 years i was kind of bored then i heard about a linux distribution called as nix os. I was very intriguid on its philosphies like rebuilds , single configuration file for all. moreever it was advertised to be a popwer user distro so i just wanted to give it a try.
+As i was an arch user i was confident in myself that i can easily read the manual and configure whatever i want but nixos does not have that good of the document for a traditional linux user.</description>
+    </item>
+    
     <item>
       <title>Shell script for battery Notification</title>
       <link>http://pavanbhat1999.github.io/posts/1_battery-notification/</link>
@@ -20,16 +30,6 @@ Dunst
 sudo pacman -S dunst
 Process Link to heading Step 1 : Bash script Link to heading Download from Github
 #!/usr/bin/bash STATUS=$(cat /sys/class/power_supply/BAT0/status) CURRENT_BAT=$(cat /sys/class/power_supply/BAT0/capacity) UPPER_LIMIT=60 LOWER_LIMIT=30 if [ &amp;#34;$STATUS&amp;#34; = &amp;#34;Charging&amp;#34; ]; then echo &amp;#39;Charging&amp;#39; if [ $CURRENT_BAT -gt $UPPER_LIMIT ] then notify-send &amp;#34;Above limit Please Unplug the Charger&amp;#34; -u critical fi else echo &amp;#34;Not Charging&amp;#34; if [ $CURRENT_BAT -gt $LOWER_LIMIT ] then echo &amp;#39;Optimum Charge&amp;#39; fi if [ $CURRENT_BAT -lt $LOWER_LIMIT ] then notify-send &amp;#34;Gone below Lower Limit.</description>
-    </item>
-    
-    <item>
-      <title>Nixos migration</title>
-      <link>http://pavanbhat1999.github.io/posts/nixos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://pavanbhat1999.github.io/posts/nixos/</guid>
-      <description>Give a try to nixos Link to heading Being an arch user for more than 2 years i was kind of bored then i heard about a linux distribution called as nix os. I was very intriguid on its philosphies like rebuilds , single configuration file for all. moreever it was advertised to be a popwer user distro so i just wanted to give it a try.
-As i was an arch user i was confident in myself that i can easily read the manual and configure whatever i want but nixos does not have that good of the document for a traditional linux user.</description>
     </item>
     
   </channel>

@@ -17,6 +17,16 @@
     </item>
     
     <item>
+      <title>Nixos migration</title>
+      <link>http://pavanbhat1999.github.io/posts/nixos/</link>
+      <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://pavanbhat1999.github.io/posts/nixos/</guid>
+      <description>Give a try to nixos Link to heading Being an arch user for more than 2 years i was kind of bored then i heard about a linux distribution called as nix os. I was very intriguid on its philosphies like rebuilds , single configuration file for all. moreever it was advertised to be a popwer user distro so i just wanted to give it a try.
+As i was an arch user i was confident in myself that i can easily read the manual and configure whatever i want but nixos does not have that good of the document for a traditional linux user.</description>
+    </item>
+    
+    <item>
       <title>Linux Commands</title>
       <link>http://pavanbhat1999.github.io/cheats/1_linux-cmds/</link>
       <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
@@ -55,16 +65,6 @@ Tracking changes with Git
 Distro hopping specialist
 Window Manager switcher
 ba$h $cript kiddie</description>
-    </item>
-    
-    <item>
-      <title>Nixos migration</title>
-      <link>http://pavanbhat1999.github.io/posts/nixos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://pavanbhat1999.github.io/posts/nixos/</guid>
-      <description>Give a try to nixos Link to heading Being an arch user for more than 2 years i was kind of bored then i heard about a linux distribution called as nix os. I was very intriguid on its philosphies like rebuilds , single configuration file for all. moreever it was advertised to be a popwer user distro so i just wanted to give it a try.
-As i was an arch user i was confident in myself that i can easily read the manual and configure whatever i want but nixos does not have that good of the document for a traditional linux user.</description>
     </item>
     
   </channel>
